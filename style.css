@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+
+body {
+        font-family: "Poppins",
+                sans-serif;
+}
+
+#productContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+}
+
+.product_card {
+        box-shadow: 0px 7px 32px rgba(0, 0, 0, 0.25);
+        width: 600px;
+        min-height: 150px;
+        border-radius: 5px;
+        display: flex;
+}
+
+.product_image {
+        flex: 1;
+        border-right: 1px solid black;
+        padding: 10px 20px;
+}
+
+.product_image img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+}
+
+.product_content {
+        flex: 5;
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+}
+
+.product_content h2 {
+        font-size: 16px;
+        font-weight: 500;
+}
+
+.product_content p {
+        font-size: 12px;
+        font-weight: 400;
+        opacity: 0.8;
+}
+
+.price_button {
+        background-color: rgba(251, 89, 40, 0.912);
+        border: none;
+        padding: 0.5rem 1.5rem;
+        font-size: 25px;
+        font-weight: 700;
+        border-radius: 0.3rem;
+        align-self: flex-end;
+        min-width: 10rem;
+}
+
+@media (max-width:800px) {
+        .product_card {
+                width: 90%;
+                height: min-content;
+                flex-direction: column;
+        }
+
+        .price_button {
+                align-self: stretch;
+        }
+
+        .input_container {
+                width: 90%;
+        }
+}
+
+@media (max-width:425) {
+        .product_card {
+                width: 90%;
+                height: min-content;
+                flex-direction: column;
+        }
+}
+
+/* Input style sheet */
+.input_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 600px;
+        margin: auto;
+        margin-bottom: 30px;
+}
+
+.input_container input {
+        width: 100%;
+        padding: 20px 30px;
+        height: 3px;
+        margin-top: 5px;
+        font-size: 15px;
+        border: 1px solid rgb(0, 149, 255);
+        border-radius: 5px;
+}
+
+.input_container input::placeholder {
+        color: rgba(0, 0, 0, 0.532);
+}
+
+.search_icon {
+        position: relative;
+        left: 30px;
+        margin-left: -30px;
+        display: grid;
+        place-items: center;
+        margin-top: 3px;
+}
